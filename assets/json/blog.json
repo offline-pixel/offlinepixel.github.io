@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "h5": "A Beginner's guide to NodeJS internal",
+        "src": "../assets/blog-images/node-js.png",
+        "alt": "node.js internals",
+        "p": "A simple overview on what lies behind our code in node.js applications",
+        "html": "<div class='reading-mode'><div class='intro'>In this section, Our first technical topic i.e. we are going to start looking into internals of node.js. Once we have an idea on how node works internally than we will be able to leverage that knowledge to write better code inside of our node.js architecture.</div><div class='table-of-content'><h4>Table of contents</h4><ol><li>Our code(App architecture)</li><li>Node.js(Dependencies)</li><li>V8 Engine(Google open source project)</li><li>libuv(C++)</li></ol></div><div class='brief'><h5 class='brief-h5'>Our code(App architecture)</h5><p class='brief-para'>We are going to first read about our own code we write building a node.js application. So, at the top, we see JavaScript code you and me write. It includes our controllers, models, server.js, config files and folders. These are the actual code which define a server application and files are executed at cli and when we run <i>node server.js</i> at command line interface, we are invoking the actual node.js program which was initially written by ryan dahl, the founder of node.js.</p><h5 class='brief-h5'>Node.js(Dependencies)</h5><p class='brief-para'>Just like any other JavaScript project, node.js, itself has lots of internal dependencies that execute your code. There are lots of dependencies in node.js, due to the limitation of this blog, As of now, we are only going to focus on v8 project and libuv project. Also, Dependencies are generally called standard library module.</p><h5 class='brief-h5'>V8 Engine(Google open source project)</h5><p class='brief-para'>V8 Engine is a JavaScript open source project and created by google team. The purpose of V8 engine is to execute JavaScript outside of the browser.</p><h5 class='brief-h5'>libuv(C++)</h5><p class='brief-para'>Libuv project is C++ open source project that gives node.js access to the operating system. To name a few, it give us access to underlying file system, networking etc.</p><div class='analysis'>If we can access JavaScript outside the browser using V8 engine and can leverage libuv(C++) to access operating system than why we really need node.js??<p>If we look into the code, we can conclude that our own code is written in combination of JavaScript and TypeScript. Till date some new frameworks are supporting the use of TypeScript over JavaScript. However, it's almost the same thing. It means 100% of code is written using JavaScript/TypeScript in our application. For node.js, ~50% of code is written in JavaScript and ~50% code written in C++. But for V8 Engine, ~30% code is JavaScript and ~70% C++ and for libuv, 100% of code is written using C++. As a JavaScript developer, we don't want to directly interact with C++ or any other language as it's a dirty practice. But in large projects you may need to write mixed code which include different languages. However, this is not a concern when you just started to write code in your career. Now, we need libuv and v8 functionalities to use with our own code and in order to interact with our code and these open source projects, node.js act as a middleware which passes our value/data to these projects after validating at node.js level and receives back the value/data returned by these project function's. For example, we have http, fs, path modules in node.js which just communicate with projects like libuv. Think of this as a user who is going to enter some information in a signup form. However, to register this user in your database, you will validate the user's email, password and other fields on front-end as well as on backend before actually passing the data to a database using npm packages. Here, npm packages, your code validation act as a validation point just like node.js, If they validate true, the user information will be passed on next checkpoint otherwise it will return an error. So, Node.js is a complete package(standard library modules) of validation checkpoints before interacting with the actual code of libuv, v8 Engine etc. and node.js is a JavaScript runtime environment and it's not a framework :)<div class='assignment'><h5 class='brief-h5'>Assignment</h5><p class='brief-para'>I want you to go to this <b><a href='https://github.com/nodejs/node/blob/master/lib/internal/bootstrap/loaders.js' style='color:#00d;' target='_blank'>link</a></b> and find a process which you might think connects c++ code to javascript code?</p></div><br /><br />Best<br />Deepak</p></div</div></div>"
+    }
+    , {
+        "id": 2,
+        "h5": "The basics of threads",
+        "src": "../assets/blog-images/needle-threads.jpg",
+        "alt": "needle threads reference image for understanding threads in programming",
+        "p": "A simple overview on what lies behind our code in node.js applications",
+        "html": "<div class='reading-mode'><div class='intro'>In this section, Our first technical topic i.e. we are going to start looking into internals of node.js. Once we have an idea on how node works internally than we will be able to leverage that knowledge to write better code inside of our node.js architecture.</div><div class='table-of-content'><h4>Table of contents<ol><li>Our code(App architecture)</li><li>node.js(Dependencies)</li><li>V8 Engine(Google open source project)</li><li>libuv(C++)</li></ol></h4></div></div>"
+    }
+    , {
+        "id": 3,
+        "h5": "Blocking the event loop in NodeJS?",
+        "src": "../assets/blog-images/event-loop.jpg",
+        "alt": "event loop",
+        "p": "In this section, you will see that how we can block an event loop with simple express.js server",
+        "html": "<div class='reading-mode'><div class='intro'>In this section, you will see that how we can block an event loop with simple express.js server. Yes, we can block that even with a simple while loop and its possible</div><div class='table-of-content'><h4>Table of contents<ol><li>Our code(App architecture)</li><li>node.js(Dependencies)</li><li>V8 Engine(Google open source project)</li><li>libuv(C++)</li></ol></h4></div></div>"
+    }
+    , {
+        "id": 4,
+        "h5": "Is nodejs single threaded? Explained",
+        "src": "../assets/blog-images/hacker.jpg",
+        "alt": "Anonymous reference image",
+        "p": "A simple overview on what lies behind our code in node.js applications",
+        "html": "<div class='reading-mode'><div class='intro'>In this section, Our first technical topic i.e. we are going to start looking into internals of node.js. Once we have an idea on how node works internally than we will be able to leverage that knowledge to write better code inside of our node.js architecture.</div><div class='table-of-content'><h4>Table of contents<ol><li>Our code(App architecture)</li><li>node.js(Dependencies)</li><li>V8 Engine(Google open source project)</li><li>libuv(C++)</li></ol></h4></div></div>"
+    }
+    , {
+        "id": 5,
+        "h5": "A Beginner's guide to nodejs internal",
+        "src": "../assets/blog-images/node-js.png",
+        "alt": "node.js internals",
+        "p": "A simple overview on what lies behind our code in node.js applications",
+        "html": "<div class='reading-mode'><div class='intro'>In this section, Our first technical topic i.e. we are going to start looking into internals of node.js. Once we have an idea on how node works internally than we will be able to leverage that knowledge to write better code inside of our node.js architecture.</div><div class='table-of-content'><h4>Table of contents<ol><li>Our code(App architecture)</li><li>node.js(Dependencies)</li><li>V8 Engine(Google open source project)</li><li>libuv(C++)</li></ol></h4></div></div>"
+    }
+    , {
+        "id": 6,
+        "h5": "A Beginner's guide to nodejs internal",
+        "src": "../assets/blog-images/nodejs-internal.png",
+        "alt": "node.js internals",
+        "p": "A simple overview on what lies behind our code in node.js applications",
+        "html": "<div class='reading-mode'><div class='intro'>In this section, Our first technical topic i.e. we are going to start looking into internals of node.js. Once we have an idea on how node works internally than we will be able to leverage that knowledge to write better code inside of our node.js architecture.</div><div class='table-of-content'><h4>Table of contents<ol><li>Our code(App architecture)</li><li>node.js(Dependencies)</li><li>V8 Engine(Google open source project)</li><li>libuv(C++)</li></ol></h4></div></div>"
+    }
+]
